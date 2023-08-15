@@ -1,16 +1,48 @@
 import dns.resolver
 import socket
+from time import sleep
 #pip install time
 #pip install socket
-#pip insrall dnspython
-print('verção: 0.2.1')
-
+#pip install dnspython
+sleep(1)
 #>>>>>>>>>>>>>>> CORES #
 norm = '\033[m'        #
 cvermelho = '\033[31m' #
 cazul = '\033[34m'     #
 cverde = '\033[32m'    #
+sist = '\033[m'        #
 #=======================
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> sistema #
+er = '\n' + cvermelho +'comando errado/erro' + norm + '\n'                         #
+#============================================
+vp1 = 0
+vp2 = 3
+vp3 = 8
+vpg = vp1 + '.' + vp2 + '.' + vp3
+print(vpg)
+def travaChats():
+        trv = input(f'''{cvermelho}
+=========≈≈=============================
+ATENÇÃO: caso você aperte enter ou cole
+o texto em algum chat o seu dispositivo
+pode ser danificado. >não use para o mal<
+{cvermelho}
+========================================
+{cverde}caso não queira o trava
+chat digite "S"
+se quiser aperte >ENTER<
+COPIE O TEXTO AZUL E COLE NO CHAT DO ALVO
+|
+|___>{norm}''')
+        if trv != 's' or trv != 'S':
+                print(f'''{cazul}
+>^<
+{norm}''')
+        else:
+                try:
+                        print('ok...\n')
+                except:
+                        print(er)
 def scannerIpHost():
         try:
                 host02 = input(f'''{cverde}
@@ -28,10 +60,9 @@ palavra específica
 que você quer encontrar.
 |
 |___|>{norm}'''))
-        Ps = str(input(f'''{cverde}
+        Ps = str(input(f'''{cverde}                                                                                                      
 site específico que
-você quer encontrar.
-|
+você quer encontrar.                                                                                                                                                             |
 |___|>{norm}'''))
         Pa = str(input(f'''{cverde}
 tipo arqetip.
@@ -64,9 +95,9 @@ while True:
 
 =========================================
 [01] pesquisa avançada no google
-[02] conecção de portas ips/hosts
+[02] verificação de conecção (server)
 [03] trava chat
-[04] scanner host
+[04] scanner ip host
 |
 |___|>{norm}'''))
         if resut01 == 1:
@@ -74,23 +105,11 @@ while True:
         elif resut01 == 2:
                 portaIp()
         elif resut01 == 3:
-                print(f'''{cvermelho}copie o texto azul
-e cole no chat que deseja trava.
->>ATENÇÃO, VOCÊ PODE DANIFICAR
-SEU APARELHO AO COLAR NO CHAT OU APERTAR
-ENTER!<<!{norm} Aperte >ENTER< para obter
-o trava chat.
-''')
-                it1 = input(f'''{cvermelho}
-caso queira sair
-digite "S"{norm}''')
-                if it1 == 's' or it1 == 'S':
-                        print('ok...')
-                else:
-                        print(f'''{cazul}
-||**By:LEIA>z҉҉҉҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉؜؜؜؜҈҉҈҉**||
-{norm}''')
+                travaChats()
         elif resut01 == 4:
                 scannerIpHost()
         else:
-                print(f'{cvermelho}opção não existente{norm}')
+                try:
+                        print(er)
+                except:
+                        print(er)
