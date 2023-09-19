@@ -1,9 +1,7 @@
 #pip install socket
 import urllib.request
 import socket
-from time import sleep
 ve03 = 9
-sleep(1.5)
 #>>>>>>>>>>>>>>> CORES #
 norm = '\033[m'        #
 cvermelho = '\033[31m' #
@@ -18,11 +16,28 @@ ser = '\n' + cvermelho + 'comando errado/erro <02>' + norm + '\n'               
 st = f'{cazul}>{norm} '
 op = f'{cazul}*{norm} '
 #============================================
-ve01 = 0
-ve02 = 6
+ve01 = 1
+ve02 = 0
 ve03 = 2
 vercc = f'{sist}{ve01}.{ve02}.{ve03}{norm}'
 print()
+
+# opc 8 >
+def pesquisarUsuario():
+        user = input(f"""{cverde}
+NOME DE USUÁRIO{st}""")
+        user = user.strip()
+        print()
+        nomesites = ["https://www.facebook.com/","https://twitter.com/","https://www.instagram.com/","https://www.linkedin.com/in/","https://github.com/","https://steamcommunity.com/id/","https://www.snapchat.com/add/","https://www.tiktok.com/@","https://www.pinterest.com/","https://www.reddit.com/user/","https://www.flickr.com/people/","https://soundcloud.com/","https://dribbble.com/","https://www.behance.net/","https://www.deviantart.com/","https://medium.com/@","https://www.quora.com/profile/","https://wordpress.com/","https://vimeo.com/","https://www.twitch.tv/","https://account.xbox.com/en-us/profile?gamertag=","https://my.playstation.com/profile/","https://www.last.fm/user/","https://myanimelist.net/profile/","https://letterboxd.com/","https://www.behance.net/","https://500px.com/"]
+        for ng in nomesites:
+                try:
+                        rgs = f"{ng}{user}/"
+                        anrgs = urllib.request.urlopen(rgs)
+                        print(f"""{cverde}[{cazul}+{cverde}] {rgs}
+{norm}""")
+                except:
+                        pass
+
 # opc 3 >
 def travaChats():
         trvs = str(input(f'''{cvermelho}
@@ -219,6 +234,7 @@ inf.=========> TORVOM
 | [05] ferramentas de investigação      |
 | [06] inceri códigos                   |
 | [07] procura caminho do site          |
+| [08] procura usuário na internet      |
 =========================================
 <(○-○)>
 
@@ -239,6 +255,8 @@ inf.=========> TORVOM
                                 kkkkk()
                         elif resut01 == 7:
                                 verCaminho()
+                        elif resut01 == 8:
+                                pesquisarUsuario()
                         else:
                                 print(er)
                 except:
