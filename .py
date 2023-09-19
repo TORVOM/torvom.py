@@ -24,6 +24,7 @@ print()
 
 # opc 8 >
 def pesquisarUsuario():
+        print(f"\n{cvermelhor}FERRAMENTA EM MANUTENÇÃO{norm}")
         user = input(f"""{cverde}
 NOME DE USUÁRIO{st}""")
         user = user.strip()
@@ -87,11 +88,8 @@ EXEMPLO: SITE.COM
 {dmn}{viajante}{c}
 {norm}""")
                 except:
-                        print(f"""{cvermelho}
-[{cazul}-{cvermelho}] {c}
-{dmn}{viajante}{c}
-{norm}""")
-
+                        pass
+        print(f"{cvermelho}FIM DA BUSCA{norm}\n")
 # opc 4 >
 def scannerIpHost():
         try:
